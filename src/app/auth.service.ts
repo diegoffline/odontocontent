@@ -9,6 +9,7 @@ import * as jwtDecode from 'jwt-decode';
 import * as moment from 'moment';
 
 import { environment } from '../environments/environment';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root'
@@ -83,7 +84,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
     if (token) {
       const cloned = req.clone({
-        headers: req.headers.set('Authorization', 'JWT '.concat(token))
+        headers: req.headers.set('Authorization', 'Bearer '.concat(token))
       });
 
       return next.handle(cloned);
@@ -97,16 +98,18 @@ export class AuthInterceptor implements HttpInterceptor {
 export class AuthGuard implements CanActivate {
 
    constructor(private authService: AuthService, private router: Router) { }
-  canActivate(): boolean {
-    if (this.authService.isLoggedIn()) {
-        //this.authService.refreshToken();
-      return true;
-    } else {
-      this.authService.logout();
-      this.router.navigate(['login']);
-      return false;
+    canActivate() {
+      if (this.authService.isLoggedIn()) {
+          //this.authService.refreshToken();
+        return true;
+      } else {
+        this.authService.logout();
+        this.router.navigate(['login']);
+        return false;
+      }
     }
-  }
+
+
 
   // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
   //   if (this.authService.isLoggedIn()) {
@@ -123,7 +126,7 @@ export class AuthGuard implements CanActivate {
   // }
 
 
-}
+  }
 
 interface JWTPayload {
   _id: number;

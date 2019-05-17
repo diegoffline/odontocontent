@@ -1,8 +1,145 @@
-conteudo : {{cont}}
+<!-- categorias -->
+<!-- categoria : {{cat}} -->
+<!-- cadastro usuario -->
+<!--  
+  <div class="cadastro-form">
+    <form method="POST" name="form-user" #f="ngForm" (ngSubmit)="addU(f)">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="main-title">CADASTRO DE USUÁRIOS</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Nome:</label>
+              <input type="text" name="name" ngModel required #name="ngModel">
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Email:</label>
+              <input type="text" name="email" ngModel required #email="ngModel">
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Password:</label>
+              <input type="password" name="password" ngModel required #password="ngModel">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-submit">
+              <input type="submit" name="submit" value="CADASTRAR">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>  -->
+  <!-- conteudo -->
+  <!-- conteudo : {{cont}} -->
+<!-- castro autores -->
+  
+    <div class="cadastro-form">
+    <form method="POST" name="form-autor" #f="ngForm" (ngSubmit)="addA(f)">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="main-title">CADASTRO DE AUTORES</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Nome:</label>
+              <input type="text" name="name" ngModel required #name="ngModel">
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Email:</label>
+              <input type="text" name="email" ngModel required #email="ngModel">
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Password:</label>
+              <input type="password" name="password" ngModel required #password="ngModel">
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-field">
+                <label>BIO:</label>
+                <textarea name="bio" ngModel required #bio="ngModel"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form-field">
+                <label>Foto:</label>
+                <input type="file" name="photo" ngModel required #photo="ngModel">
+              </div>
+            </div>
+          </div>  
+        <div class="row">
+          <div class="col-12">
+            <div class="form-submit">
+              <input type="submit" name="submit" value="CADASTRAR">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> 
 
-<p>oi</p>
 
-categoria : {{cat}}
+<!-- castro categorias -->
+ 
+    <div class="cadastro-form">
+    <form method="POST" name="form-category" #f="ngForm" (ngSubmit)="addC(f)">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="main-title">CADASTRO DE CATEGORIA</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Nome:</label>
+              <input type="text" name="name" ngModel required #name="ngModel">
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Description:</label>
+              <input type="text" name="description" ngModel required #description="ngModel">
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-field">
+              <label>Slug:</label>
+              <input type="text" name="slug" ngModel required #slug="ngModel">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-submit">
+              <input type="submit" name="submit" value="CADASTRAR">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> 
 
-<input #name type='name' placeholder='password'>
-<button (click)="addAut(name.value)">Name</button>
+
+  content:  {{cont}}

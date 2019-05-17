@@ -4,7 +4,7 @@
   </h1>
 </div>
 
-<input #email type='text' placeholder='email'>
-<input #password type='password' placeholder='password'>
+<input #email type='text' name='email' placeholder='email'>
+<input #password type='password' name='password' placeholder='password'>
 <button (click)="login(email.value, password.value)">login</button>
 {{ error?.message }}
